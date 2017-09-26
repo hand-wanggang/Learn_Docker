@@ -95,8 +95,6 @@ docker top Name/ID
 #从容器拷贝文件、目录到本地的一个路径
 docker cp Name:/container_path to_path
 docker cp ID:/container_path to_path
-
-
 ```
 
 ##### 七、登录registry server
@@ -106,9 +104,11 @@ docker cp ID:/container_path to_path
 docker login
 ```
 
+##### 八、docker镜像的发布
 
-
-
+```
+docker push new_image_name
+```
 
 
 
