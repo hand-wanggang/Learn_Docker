@@ -68,7 +68,7 @@ sysctl -w net.ipv4.tcp_keepalive_intvl=1
 sysctl -w net.ipv4.tcp_keepalive_probes=10
 ```
 
-7、编写Dockerfile
+7、编写Dockerfile，在项目的根目录下即可eureka-demo/eure-server1/
 
 ```
 #设置基础镜像
@@ -87,5 +87,30 @@ ENV JAVA_OPTS="-Xmx256m -Xms64m -XX:MinHeapDeltaBytes=65536 -Dcom.sun.management
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
 ```
 
+8、生成docker镜像
 
+```
+#生成docker镜像,不要忘记最后一个点，这表明dockerfile在当前目录下，如果dockerfile不在当前目录，需要指定
+docker build -t demo/erueka-server-v1.0 .
+
+#执行上面的命令后，查看镜像是否生成成功
+docker images | grep eureka-server-v1.0
+
+```
+
+![](/assets/import-docker-1.png)
+
+9、运行一个docker实例
+
+```
+#运行生成的镜像，并进行端口映射
+docker run -p 8761:8761 demo/eureka-server-v1.0
+```
+
+```
+#查看当前正在运行的docker实例
+docker ps
+```
+
+![](/assets/import.png)
 
