@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install docker.io
 ```
 
-##### 3、判断是否安装正确
+3、判断是否安装正确
 
 ```
 sudo docker info
