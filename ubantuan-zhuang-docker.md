@@ -1,6 +1,28 @@
-# Ubuntu安装Docker
+## Ubuntu安装Docker
 
-##### 一、不使用sudo的情况下，使用docker命令
+##### 一、ubuntu 安装Docker
+
+1、在ubuntu中打开一个终端，并执行如下命令
+
+```
+#更新软件源列表
+sudo apt-get update
+```
+
+2、安装docker
+
+```
+#安装docker
+sudo apt-get install docker.io
+```
+
+##### 3、判断是否安装正确
+
+```
+sudo docker info
+```
+
+##### 二、不使用sudo的情况下，使用docker命令
 
 默认安装完docker后，每次执行docker命令都需要sudo，否则就会失败！下面来解决如何不使用sudo的情况下使用docker
 
