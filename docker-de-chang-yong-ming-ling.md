@@ -107,7 +107,18 @@ docker login
 ##### 八、docker镜像的发布
 
 ```
+# docker push 镜像名称（'/'之前应该是docker上注册的用户名）
 docker push new_image_name
+
+```
+
+##### 九、设置镜像标签
+
+```
+# 设置镜像标签
+docker tag 镜像id 用户名称/镜像源:新的标签名
+#exm
+docker tag 5db5f8471261 wg/eureka-server:devel
 ```
 
 
