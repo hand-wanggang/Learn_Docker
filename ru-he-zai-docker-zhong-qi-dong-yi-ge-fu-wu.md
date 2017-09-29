@@ -95,7 +95,6 @@ docker build -t demo/erueka-server-v1.0 .
 
 #执行上面的命令后，查看镜像是否生成成功
 docker images | grep eureka-server-v1.0
-
 ```
 
 ![](/assets/import-docker-1.png)
@@ -112,5 +111,44 @@ docker run -p 8761:8761 demo/eureka-server-v1.0
 docker ps
 ```
 
-![](/assets/import.png)
+![](/assets/import.png)10、查看web应用的日志
+
+```
+#查看web应用的日志
+docker logs -f b5c492b22c8b
+
+#查看web应用程序容器的进程
+docker top b5c492b22c8b
+
+#检查web应用程序(查看Docker容器的配置和状态信息)
+docker inspect b5c492b22c8b
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
